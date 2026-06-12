@@ -34,7 +34,9 @@ window.addEventListener("load", hideLoader);
 document.querySelector("[data-open-invitation]").addEventListener("click", openInvitation);
 elements.detailToggle.addEventListener("click", showDetails);
 elements.musicBtn.addEventListener("click", toggleMusic);
-elements.rsvpForm.addEventListener("submit", sendRSVP);
+if (elements.rsvpForm) {
+  elements.rsvpForm.addEventListener("submit", sendRSVP);
+}
 elements.lightboxClose.addEventListener("click", closeLightbox);
 elements.lightbox.addEventListener("click", handleLightboxBackdrop);
 document.addEventListener("keydown", handleKeyboard);

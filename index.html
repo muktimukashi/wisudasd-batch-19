@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puncak Prestasi HARMONI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <audio id="backsound" loop>
+    <source src="assets/jalanpulang.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="loader" id="loader" aria-live="polite">
+    <img src="assets/watercolor1.png" alt="">
+    <p>Memuat Undangan...</p>
+  </div>
+
+  <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-card">
+      <img src="assets/watercolor1.png" class="popup-flower" alt="">
+      <p class="mini">Undangan</p>
+      <h1 id="popupTitle">Puncak Prestasi</h1>
+      <h2>HARMONI</h2>
+      <p class="meaning">Harapan Meraih Masa Depan yang Inspiratif</p>
+      <p class="guest">Kepada Yth.<br><b id="guestName">Ayah dan Bunda</b></p>
+      <button class="primary-btn" type="button" data-open-invitation>Buka Undangan</button>
+    </div>
+  </div>
+
+  <button class="music-btn" type="button" id="musicBtn" aria-label="Putar musik" aria-pressed="false">
+    <span id="musicIcon">Music</span>
+  </button>
+
+  <nav class="nav-dots" aria-label="Navigasi section">
+    <a href="#home" aria-label="Beranda"></a>
+    <a href="#undangan" aria-label="Undangan"></a>
+    <a href="#detail" aria-label="Detail acara"></a>
+    <a href="#rsvp" aria-label="RSVP"></a>
+  </nav>
+
+  <main>
+    <section class="hero reveal" id="home">
+      <div class="petal petal-1"></div>
+      <div class="petal petal-2"></div>
+      <div class="petal petal-3"></div>
+      <div class="petal petal-4"></div>
+
+      <img src="assets/watercolor1.png" class="hero-flower" alt="">
+      <p class="mini">Puncak Prestasi Batch 19</p>
+      <h1>Puncak Prestasi</h1>
+      <h2>HARMONI</h2>
+      <p class="subtitle">Harapan Meraih Masa Depan yang Inspiratif</p>
+
+      <div class="date-box">
+        <span>Sabtu</span>
+        <strong>20 Juni 2026</strong>
+      </div>
+
+      <a href="#undangan" class="scroll-btn">Lihat Detail</a>
+    </section>
+
+    <section class="quote reveal" id="undangan">
+      <div class="container glass">
+        <h3>Dengan Hormat</h3>
+        <p>
+          Di cakrawala yang terbentang luas, tumbuh cita-cita yang tak berbatas.
+          Saat ini kita berdiri di sebuah persimpangan indah. Sebuah titik yang bukan akhir perjalanan,
+          melainkan awal dari langkah-langkah besar menuju masa depan.
+        </p>
+        <p>
+          Dengan bekal ilmu, ketekunan, dan doa yang mengiringi, mereka siap menapaki jalan baru penuh peluang dan harapan.
+          Puncak prestasi adalah perayaan atas lahirnya generasi yang siap bersinar, membawa kebaikan,
+          dan mewujudkan impian menjadi kenyataan.
+        </p>
+        <p>
+          Kami mengundang Ayah dan Bunda untuk hadir dan menyaksikan momen istimewa
+          <b>Puncak Prestasi Batch 19</b>.
+        </p>
+      </div>
+    </section>
+
+    <section class="event reveal" id="detail">
+      <div class="container">
+        <h3>Detail Acara</h3>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <span aria-hidden="true">01</span>
+            <h4>Tanggal</h4>
+            <p>Sabtu, 20 Juni 2026</p>
+          </article>
+
+          <article class="info-card">
+            <span aria-hidden="true">02</span>
+            <h4>Waktu</h4>
+            <p>08.00 WIB - selesai</p>
+          </article>
+
+          <article class="info-card">
+            <span aria-hidden="true">03</span>
+            <h4>Acara</h4>
+            <p>Puncak Prestasi Batch 19</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown-section reveal">
+      <div class="container glass">
+        <h3>Menuju Hari Istimewa</h3>
+
+        <div class="countdown" aria-live="polite">
+          <div><strong id="days">00</strong><span>Hari</span></div>
+          <div><strong id="hours">00</strong><span>Jam</span></div>
+          <div><strong id="minutes">00</strong><span>Menit</span></div>
+          <div><strong id="seconds">00</strong><span>Detik</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline reveal">
+      <div class="container">
+        <h3>Susunan Acara</h3>
+
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <b>08.00</b>
+            <p>Registrasi Tamu</p>
+          </div>
+          <div class="timeline-item">
+            <b>08.30</b>
+            <p>Pembukaan</p>
+          </div>
+          <div class="timeline-item">
+            <b>09.00</b>
+            <p>Prosesi Puncak Prestasi</p>
+          </div>
+          <div class="timeline-item">
+            <b>10.30</b>
+            <p>Penampilan dan Dokumentasi</p>
+          </div>
+          <div class="timeline-item">
+            <b>11.30</b>
+            <p>Penutup</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery reveal">
+      <div class="container">
+        <h3>Galeri Kenangan</h3>
+
+        <div class="gallery-grid">
+          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
+            <img src="assets/watercolor1.png" alt="Ilustrasi momen wisuda">
+          </button>
+          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
+            <img src="assets/watercolor1.png" alt="Ilustrasi kenangan siswa">
+          </button>
+          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
+            <img src="assets/watercolor1.png" alt="Ilustrasi perayaan keluarga">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section reveal">
+      <div class="container glass">
+        <h3>Lokasi Acara</h3>
+        <p>Silakan sesuaikan titik lokasi pada Google Maps.</p>
+
+        <div class="map">
+          <iframe
+            title="Lokasi The Indonesia Natural School"
+            src="https://www.google.com/maps?q=The%20Indonesia%20Natural%20School&output=embed"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=The%20Indonesia%20Natural%20School" target="_blank" rel="noreferrer">
+          Buka Google Maps
+        </a>
+      </div>
+    </section>
+
+    <section class="rsvp reveal" id="rsvp">
+      <div class="container">
+        <h3>Konfirmasi Kehadiran</h3>
+
+        <form id="rsvpForm">
+          <input type="text" id="nama" placeholder="Nama Ayah/Bunda" autocomplete="name" required>
+          <select id="hadir" required>
+            <option value="">Konfirmasi Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+          </select>
+          <textarea id="ucapan" placeholder="Ucapan atau doa"></textarea>
+          <button class="primary-btn" type="submit">Kirim Konfirmasi</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="reveal">
+    <img src="assets/watercolor1.png" alt="">
+    <h3>Terima Kasih</h3>
+    <p>Atas kehadiran dan doa Ayah/Bunda.</p>
+    <b>Puncak Prestasi Batch 19 - HARMONI</b>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Tutup galeri">Tutup</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

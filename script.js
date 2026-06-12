@@ -10,6 +10,7 @@ const elements = {
   lightbox: document.getElementById("lightbox"),
   lightboxImage: document.getElementById("lightboxImage"),
   lightboxClose: document.getElementById("lightboxClose"),
+  detailToggle: document.querySelector("[data-toggle-details]"),
   countdown: {
     days: document.getElementById("days"),
     hours: document.getElementById("hours"),
@@ -20,11 +21,18 @@ const elements = {
 
 const eventDate = new Date("2026-06-20T08:00:00+07:00");
 const whatsappNumber = "6281234567890";
+const galleryImages = [
+  "assets/foto-level.jpg",
+  "assets/foto-level-6-1.jpg",
+  "assets/foto-level-6-2.jpg"
+];
+const galleryInterval = 4200;
 
 document.body.classList.add("no-scroll");
 
 window.addEventListener("load", hideLoader);
 document.querySelector("[data-open-invitation]").addEventListener("click", openInvitation);
+elements.detailToggle.addEventListener("click", showDetails);
 elements.musicBtn.addEventListener("click", toggleMusic);
 elements.rsvpForm.addEventListener("submit", sendRSVP);
 elements.lightboxClose.addEventListener("click", closeLightbox);
@@ -37,6 +45,7 @@ document.querySelectorAll("[data-gallery]").forEach((button) => {
 
 setGuestNameFromUrl();
 initCountdown();
+initGallerySlideshow();
 initRevealAnimation();
 initActiveNavigation();
 
@@ -70,6 +79,18 @@ function openInvitation() {
   }, 500);
 }
 
+function showDetails(event) {
+  event.preventDefault();
+
+  document.querySelectorAll(".detail-content").forEach((section) => {
+    section.classList.remove("is-collapsed");
+  });
+
+  elements.detailToggle.textContent = "Detail Terbuka";
+  elements.detailToggle.setAttribute("aria-expanded", "true");
+  document.getElementById("undangan").scrollIntoView({ behavior: "smooth" });
+}
+
 function playMusic() {
   elements.backsound.play()
     .then(() => updateMusicButton(true))
@@ -96,6 +117,30 @@ function updateMusicButton(isPlaying) {
 function initCountdown() {
   updateCountdown();
   setInterval(updateCountdown, 1000);
+}
+
+function initGallerySlideshow() {
+  const slideshow = document.querySelector(".gallery-slideshow");
+  if (!slideshow) return;
+
+  const slides = slideshow.querySelectorAll(".gallery-slide");
+  let activeSlide = 0;
+  let activeImage = 0;
+
+  slideshow.dataset.gallery = galleryImages[activeImage];
+
+  if (galleryImages.length < 2) return;
+
+  setInterval(() => {
+    activeImage = (activeImage + 1) % galleryImages.length;
+    activeSlide = 1 - activeSlide;
+
+    slides[activeSlide].src = galleryImages[activeImage];
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("is-active", index === activeSlide);
+    });
+    slideshow.dataset.gallery = galleryImages[activeImage];
+  }, galleryInterval);
 }
 
 function updateCountdown() {

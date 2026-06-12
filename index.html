@@ -7,16 +7,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&display=swap" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Niconne&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=IM+Fell+Double+Pica:ital@0;1&family=Niconne&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<audio id="backsound" loop preload="auto">
-  <source src="assets/jalanpulang.mp3" type="audio/mpeg">
-  <source src="assets/jalanpulang.m4a" type="audio/mp4">
-</audio>
+  <audio id="backsound" loop preload="auto">
+    <source src="assets/jalanpulang.mp3" type="audio/mpeg">
+    <source src="assets/jalanpulang.m4a" type="audio/mp4">
+  </audio>
 
   <div class="loader" id="loader" aria-live="polite">
     <img src="assets/watercolor-3.png" alt="">
@@ -26,11 +25,10 @@
   <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
     <div class="popup-card">
       <img src="assets/logo.png" class="popup-logo" alt="Logo HARMONI">
-      <p class="mini">Undangan</p>
-      <h3 id="popupTitle">Puncak Prestasi "Harmoni"</h3>
-      
-      <p class="meaning">Harapan Raih Masa Depan dnegan Optimis penuh Inspiratif</p>
-      <p class="guest">Kepada Yth. Ayah Bunda tercinta, mohon kehadirannya dengan penuh bangga, tawa, dan kenangan indah bersama Ananda.</p>
+      <p class="mini popup-kicker" id="popupTitle"><br>Undangan <br>Puncak Prestasi Batch 19 </p>
+      <h3 class="brand-script">Harmoni</h3>
+      <p class="meaning">Harapan Raih Masa Depan dengan Optimis penuh Inspiratif</p>
+      <p class="guest">Kepada Yth. Ayah Bunda tercinta</p>
       <button class="primary-btn" type="button" data-open-invitation>Buka Undangan</button>
     </div>
   </div>
@@ -55,21 +53,33 @@
 
       <img src="assets/watercolor1.png" class="hero-flower" alt="">
       <p class="mini">Puncak Prestasi Batch 19</p>
-      <h3>Puncak Prestasi</h3>
-      <h3>HARMONI</h3>
-      <p class="subtitle">Harapan Meraih Masa Depan yang Inspiratif</p>
+      <h3 class="brand-script hero-brand">Harmoni</h3>
+      <p class="subtitle">Harapan Raih Masa Depan dengan Optimis penuh Inspiratif..</p>
 
-      <div class="date-box">
-        <span>Sabtu</span>
-        <strong>20 Juni 2026</strong>
+      <div class="event-summary" aria-label="Ringkasan acara">
+        <div>
+          <span aria-hidden="true">&#128197;</span>
+          <p>Hari/Tanggal</p>
+          <strong>Sabtu, 20 Juni 2026</strong>
+        </div>
+        <div>
+          <span aria-hidden="true">&#9200;</span>
+          <p>Pukul</p>
+          <strong>08.00 WIB - selesai</strong>
+        </div>
+        <div>
+          <span aria-hidden="true">&#128205;</span>
+          <p>Tempat</p>
+          <strong>Fakultas Hukum Universitas Indonesia</strong>
+        </div>
       </div>
 
-      <a href="#undangan" class="scroll-btn">Lihat Detail</a>
+      <a href="#undangan" class="scroll-btn" data-toggle-details aria-expanded="false">Lihat Detail</a>
     </section>
 
-    <section class="quote reveal" id="undangan">
+    <section class="quote reveal detail-content is-collapsed" id="undangan">
       <div class="container glass">
-        <h3>Dengan Hormat</h3>
+        <h3 class="description-brand">Harmoni</h3>
         <p>
           Di cakrawala yang terbentang luas, tumbuh cita-cita yang tak berbatas.
           Saat ini kita berdiri di sebuah persimpangan indah. Sebuah titik yang bukan akhir perjalanan,
@@ -87,35 +97,9 @@
       </div>
     </section>
 
-    <section class="event reveal" id="detail">
-      <div class="container">
-        <h3>Detail Acara</h3>
-
-        <div class="info-grid">
-          <article class="info-card">
-            <span aria-hidden="true">01</span>
-            <h4>Tanggal</h4>
-            <p>Sabtu, 20 Juni 2026</p>
-          </article>
-
-          <article class="info-card">
-            <span aria-hidden="true">02</span>
-            <h4>Waktu</h4>
-            <p>08.00 WIB - selesai</p>
-          </article>
-
-          <article class="info-card">
-            <span aria-hidden="true">03</span>
-            <h4>Acara</h4>
-            <p>Puncak Prestasi Batch 19</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="countdown-section reveal">
-      <div class="container glass">
-        <h3>Menuju Hari Istimewa</h3>
+    <section class="countdown-section reveal detail-content is-collapsed">
+      <div class="countdown-card">
+        <h3>Hitung Mundur Acara</h3>
 
         <div class="countdown" aria-live="polite">
           <div><strong id="days">00</strong><span>Hari</span></div>
@@ -123,12 +107,13 @@
           <div><strong id="minutes">00</strong><span>Menit</span></div>
           <div><strong id="seconds">00</strong><span>Detik</span></div>
         </div>
+
       </div>
     </section>
 
-    <section class="timeline reveal">
-      <div class="container">
-        <h3>Susunan Acara</h3>
+    <section class="timeline reveal detail-content is-collapsed">
+      <div class="container timeline-card">
+        <h3 class="section-title">Susunan Acara</h3>
 
         <div class="timeline-list">
           <div class="timeline-item">
@@ -155,27 +140,22 @@
       </div>
     </section>
 
-    <section class="gallery reveal">
+    <section class="gallery reveal detail-content is-collapsed">
       <div class="container">
-        <h3>Galeri Kenangan</h3>
+        <h3 class="section-title">Galeri Kenangan</h3>
 
         <div class="gallery-grid">
-          <button class="gallery-card" type="button" data-gallery="assets/foto-level.jpg">
-            <img src="assets/foto-level.jpg" alt="Ilustrasi momen wisuda">
+          <button class="gallery-card gallery-slideshow" type="button" data-gallery="assets/foto-level.jpg" aria-label="Buka galeri kenangan">
+            <img class="gallery-slide is-active" src="assets/foto-level.jpg" alt="Ilustrasi momen wisuda">
+            <img class="gallery-slide" src="assets/foto-level.jpg" alt="">
           </button>
-          <!-- <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
-            <img src="assets/watercolor1.png" alt="Ilustrasi kenangan siswa">
-          </button>
-          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
-            <img src="assets/watercolor1.png" alt="Ilustrasi perayaan keluarga">
-          </button> -->
         </div>
       </div>
     </section>
 
-    <section class="map-section reveal">
+    <section class="map-section reveal detail-content is-collapsed">
       <div class="container glass">
-        <h3>Lokasi Acara</h3>
+        <h3 class="section-title">Lokasi Acara</h3>
         <p>Silakan sesuaikan titik lokasi pada Google Maps.</p>
 
         <div class="map">
@@ -193,9 +173,9 @@
       </div>
     </section>
 
-    <section class="rsvp reveal" id="rsvp">
+    <section class="rsvp reveal detail-content is-collapsed" id="rsvp">
       <div class="container">
-        <h3>Konfirmasi Kehadiran</h3>
+        <h3 class="section-title">Konfirmasi Kehadiran</h3>
 
         <form id="rsvpForm">
           <input type="text" id="nama" placeholder="Nama Ayah/Bunda" autocomplete="name" required>
@@ -214,7 +194,7 @@
 
   <footer class="reveal">
     <img src="assets/watercolor-3.png" alt="">
-    <h3>Terima Kasih</h3>
+    <h3 class="section-title">Terima Kasih</h3>
     <p>Atas kehadiran dan doa Ayah/Bunda.</p>
     <b>Puncak Prestasi Batch 19 - HARMONI</b>
   </footer>

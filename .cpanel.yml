@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/USERNAME/public_html/
+    - export DEPLOYPATH=/home/sdsemut2/public_html/sd.semut-semut.sch.id/wisuda-batch19/
     - /bin/cp -R * $DEPLOYPATH

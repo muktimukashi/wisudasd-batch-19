@@ -7,28 +7,29 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Imperial+Script&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <audio id="backsound" loop>
-    <source src="assets/jalanpulang.mp3" type="audio/mpeg">
-  </audio>
+<audio id="backsound" loop preload="auto">
+  <source src="assets/jalanpulang.mp3" type="audio/mpeg">
+  <source src="assets/jalanpulang.m4a" type="audio/mp4">
+</audio>
 
   <div class="loader" id="loader" aria-live="polite">
-    <img src="assets/watercolor1.png" alt="">
+    <img src="assets/watercolor-3.png" alt="">
     <p>Memuat Undangan...</p>
   </div>
 
   <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
     <div class="popup-card">
-      <img src="assets/watercolor1.png" class="popup-flower" alt="">
+      <img src="assets/logo.png" class="popup-logo" alt="Logo HARMONI">
       <p class="mini">Undangan</p>
-      <h1 id="popupTitle">Puncak Prestasi</h1>
-      <h2>HARMONI</h2>
+      <h1 id="popupTitle">Puncak Prestasi "Harmoni"</h1>
+      
       <p class="meaning">Harapan Meraih Masa Depan yang Inspiratif</p>
-      <p class="guest">Kepada Yth.<br><b id="guestName">Ayah dan Bunda</b></p>
+      <p class="guest">Kepada Yth. Ayah Bunda tercinta, mohon kehadirannya dengan penuh bangga, tawa, dan kenangan indah bersama Ananda.</p>
       <button class="primary-btn" type="button" data-open-invitation>Buka Undangan</button>
     </div>
   </div>
@@ -158,15 +159,15 @@
         <h3>Galeri Kenangan</h3>
 
         <div class="gallery-grid">
-          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
-            <img src="assets/watercolor1.png" alt="Ilustrasi momen wisuda">
+          <button class="gallery-card" type="button" data-gallery="assets/foto-level.jpg">
+            <img src="assets/foto-level.jpg" alt="Ilustrasi momen wisuda">
           </button>
-          <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
+          <!-- <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
             <img src="assets/watercolor1.png" alt="Ilustrasi kenangan siswa">
           </button>
           <button class="gallery-card" type="button" data-gallery="assets/watercolor1.png">
             <img src="assets/watercolor1.png" alt="Ilustrasi perayaan keluarga">
-          </button>
+          </button> -->
         </div>
       </div>
     </section>
@@ -178,14 +179,14 @@
 
         <div class="map">
           <iframe
-            title="Lokasi The Indonesia Natural School"
-            src="https://www.google.com/maps?q=The%20Indonesia%20Natural%20School&output=embed"
+            title="Lokasi Fakultas Hukum Universitas Indonesia"
+            src="https://www.google.com/maps?q=Fakultas%20Hukum%20Universitas%20Indonesia%20Depok&output=embed"
             loading="lazy"
             allowfullscreen>
           </iframe>
         </div>
 
-        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=The%20Indonesia%20Natural%20School" target="_blank" rel="noreferrer">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Fakultas%20Hukum%20Universitas%20Indonesia%20Depok" target="_blank" rel="noreferrer">
           Buka Google Maps
         </a>
       </div>
@@ -211,7 +212,7 @@
   </main>
 
   <footer class="reveal">
-    <img src="assets/watercolor1.png" alt="">
+    <img src="assets/watercolor-3.png" alt="">
     <h3>Terima Kasih</h3>
     <p>Atas kehadiran dan doa Ayah/Bunda.</p>
     <b>Puncak Prestasi Batch 19 - HARMONI</b>

@@ -22,9 +22,17 @@ const elements = {
 const eventDate = new Date("2026-06-20T08:00:00+07:00");
 const whatsappNumber = "6281234567890";
 const galleryImages = [
-  "assets/foto-level.jpg",
-  "assets/foto-level-6-1.jpg",
-  "assets/foto-level-6-2.jpg"
+  "assets/fotolevel6 (1).jpg",
+  "assets/fotolevel6 (2).jpg",
+  "assets/fotolevel6 (3).jpg",
+  "assets/fotolevel6 (4).jpg",
+  "assets/fotolevel6 (5).jpg",
+  "assets/fotolevel6 (6).jpg",
+  "assets/fotolevel6 (7).jpg",
+  "assets/fotolevel6 (8).jpg",
+  "assets/fotolevel6 (9).jpg",
+  "assets/fotolevel6 (10).jpg",
+  
 ];
 const galleryInterval = 4200;
 

@@ -121,6 +121,8 @@ h3 {
   color: var(--gold);
   font-size: 13px;
   font-weight: 600;
+  padding: 24px;
+
 }
 
 .popup-kicker {
